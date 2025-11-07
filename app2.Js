@@ -4,7 +4,7 @@ function returnSentence(str) {
     /**
      * join() allows us to transform an array into string
      * split() allows us to transform a string into an array
-     * reverse() allows us to return the array'element.
+     * reverse() allows us to return the inverse array'element.
      */
 
 }
