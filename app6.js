@@ -1,16 +1,14 @@
 function maj(str) {
-// Mettre ma chaine de caractere en miniscule
-var tableauMinus = str.toLowerCase(' ');
+    // Mettre la chaîne en minuscules et la découper en mots
+    var mots = str.toLowerCase().split(' ');
 
-// resultat , j appelle  map qui une methode callback
-var results = tableauMinus.map(function(val){
-    return val.replace(val.charAt(0),val.charAt(0).toUppeCase()); // Pour chaque element je prends la première lettre et je la transforme en majuscule
-})
+    // Transformer la première lettre de chaque mot en majuscule
+    var results = mots.map(function(val){
+        return val.charAt(0).toUpperCase() + val.slice(1);
+    });
 
-return results.join(" ");
+    return results.join(" ");
 }
 
-
-
-
-console.log("Les sanglots longs des violons de l' automne...")
+console.log(maj("Les sanglots longs des violons de l' automne..."));
+// Résultat : "Les Sanglots Longs Des Violons De L' Automne..."
