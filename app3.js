@@ -1,4 +1,4 @@
-function factoriser(num){
+function factorielle(num){
 
 for(let i = 1 ; num > 1 ; num--) {
     i = num * i;
@@ -9,4 +9,4 @@ return i;
 
 }
 
-console.log(factoriser(5));
+console.log(factorielle(5));
