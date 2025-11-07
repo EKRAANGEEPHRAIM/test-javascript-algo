@@ -1,16 +1,16 @@
 function findPerson(data, source) {
-  var scr = Object.keys(source);
+  var scr = Object.keys(source); // toutes les clés de l'objet source
 
   return data.filter(function (obj) {
     for (var i = 0; i < scr.length; i++) {
       if (
-        obj.hasOwnProperty(scr[i]) === false ||
-        obj[scr[i]] !== source[scr[i]]
+        obj.hasOwnProperty(scr[i]) === false || // si l'objet n'a pas la clé
+        obj[scr[i]] !== source[scr[i]]          // ou la valeur est différente
       ) {
-        return false;
+        return false; // on exclut cet objet
       }
     }
-    return true;
+    return true; // toutes les clés correspondent → on garde l'objet
   });
 }
 
@@ -25,9 +25,7 @@ console.log(
     { name: "Lafite" }
   )
 );
-
-
-// const findPerson = (data, source) => {
-//   const keys = Object.keys(source);
-//   return data.filter(obj => keys.every(key => obj[key] === source[key]));
-// };
+// Résultat : [
+//   { lastName: "Jean", name: "Lafite" },
+//   { lastName: "Lucien", name: "Lafite" }
+// ]
